@@ -1,0 +1,43 @@
+.logo{
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 50% !important;
+    overflow: hidden;
+    width: 80px;
+  
+  }
+  
+  .symbolbild
+  {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
+  }
+  
+  .level
+  {
+    background-color: var(--ion-color-primary);
+    border-bottom-left-radius: 20px 50%;
+    border-top-left-radius: 20px 50%;
+    width: 250px;
+    text-align: center;
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: 35px;
+    color: white;
+  }
+  
+  .button
+  {
+    width: 300px;
+    margin-top: 35px;
+  }
+  
+  .center-button
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  

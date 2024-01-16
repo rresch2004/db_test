@@ -1,0 +1,34 @@
+.ranking-divider{
+    height: 2px;
+    background-color: #5A3179;
+    width: 95%;
+}
+
+.ranking-mt{
+  margin-top: 20px;
+}
+
+.ranking-pr2{
+  padding-right: 20px;
+}
+
+.ranking-element{
+  width: 50%;
+}
+
+.ranking-h2{
+  font-size: 30px;
+}
+
+.ranking-icon-size{
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 600px){
+  .ranking-h2{
+    font-size: 15px;
+  }
+  .ranking-icon-size{
+    font-size: 20px;
+  }
+}

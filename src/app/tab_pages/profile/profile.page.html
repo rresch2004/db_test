@@ -1,0 +1,109 @@
+<ion-content [fullscreen]="true">
+  <div class="button-settings">
+    <ion-button (click)="goToSettingsPage()">
+      <ion-icon name="settings"></ion-icon>
+    </ion-button>
+  </div>
+
+
+  <ion-img
+    src="../assets/pictures/Avatare/zauberer/avatar_zauberer1.png"
+    alt="Avatar"
+    class="avatar">
+  </ion-img>
+
+  <h1 style="font-weight: bold; text-align: center;">Max Mustermann</h1>
+  <h5 style="font-weight: lighter; font-style: italic; text-align: center; color: var(--ion-color-quaternary)">{{ learninglevel(7)}}</h5>
+
+  <div class="level-balken">
+
+  </div>
+  <div style="display: flex; justify-content: space-between; margin: 15px; margin-top: 5px">
+    <h6>Level x</h6>
+    <h6>x Münzen bis x</h6>
+  </div>
+
+
+
+  <div style="display: flex; justify-content: space-between; margin: 50px">
+    <ion-card class="card1">
+      <ion-card-title style="font-weight: bold;">
+        <ion-icon src="../assets/icon/Coin.svg"></ion-icon>
+        500
+      </ion-card-title>
+      <ion-card-subtitle style="color: black">Münzen</ion-card-subtitle>
+    </ion-card>
+
+    <ion-card class="card1">
+      <ion-card-title style="font-weight: bold;">
+        <ion-icon style="color: var(--ion-color-quaternary)" name="flash"></ion-icon>
+        500
+      </ion-card-title>
+      <ion-card-subtitle style="color: black">Energie</ion-card-subtitle>
+    </ion-card>
+
+    <ion-card class="card1">
+      <ion-card-title style="font-weight: bold;">
+        <ion-icon style="color: var(--ion-color-quaternary)" name="flame"></ion-icon>
+        5
+      </ion-card-title>
+      <ion-card-subtitle style="color: black">Level</ion-card-subtitle>
+    </ion-card>
+  </div>
+
+
+  <div>
+    <h2 style="color: var(--ion-color-primary); font-weight: bold; margin-bottom: 0px; margin-left: 70px">Lernstatistik</h2>
+  <div style="display: flex; justify-content: space-between; margin: 0px; margin-left: 50px; margin-right: 50px">
+    <ion-card class="card1">
+      <ion-card-title style="font-weight: bold;">
+        5
+      </ion-card-title>
+      <ion-card-subtitle style="color: black">Lerneinheiten</ion-card-subtitle>
+    </ion-card>
+
+    <ion-card class="card1">
+      <ion-card-title style="font-weight: bold;">
+        50
+      </ion-card-title>
+      <ion-card-subtitle style="color: black">Minuten gelernt</ion-card-subtitle>
+    </ion-card>
+
+    <ion-card class="card1">
+      <ion-card-title style="font-weight: bold;">
+        15
+      </ion-card-title>
+      <ion-card-subtitle style="color: black">Tage gelernt</ion-card-subtitle>
+    </ion-card>
+  </div>
+  </div>
+
+
+  <div style="margin-top: 50px; margin-bottom: 70px">
+    <h2 style="color: var(--ion-color-primary); font-weight: bold; margin-bottom: 0px; margin-left: 70px">Quizstatistik</h2>
+    <div style="display: flex; justify-content: space-between; margin: 0px; margin-left: 50px; margin-right: 50px">
+      <ion-card class="card1">
+        <ion-card-title style="font-weight: bold;">
+          2
+        </ion-card-title>
+        <ion-card-subtitle style="color: black">fertige Quizze</ion-card-subtitle>
+      </ion-card>
+
+      <ion-card class="card1">
+        <ion-card-title style="font-weight: bold;">
+          20
+        </ion-card-title>
+        <ion-card-subtitle style="color: black">korrekte Antworten</ion-card-subtitle>
+      </ion-card>
+
+      <ion-card class="card1">
+        <ion-card-title style="font-weight: bold;">
+          5
+        </ion-card-title>
+        <ion-card-subtitle style="color: black">falsche Antworten</ion-card-subtitle>
+      </ion-card>
+    </div>
+  </div>
+
+
+</ion-content>

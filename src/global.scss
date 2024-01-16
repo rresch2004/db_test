@@ -24,3 +24,54 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .h100{
+    height: 100%;
+  }
+  
+  .flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .flex-start{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .flex-end{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .direction-row{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .align-items-center{
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-button {
+    text-transform: none; /* Setzt den Text innerhalb des Buttons auf den ursprünglichen Fall zurück */
+  }
+  
+  .ml{
+    margin-left: 5%;
+  }
+  
+  .mr{
+    margin-right: 5%;
+  }
+  

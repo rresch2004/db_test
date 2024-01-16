@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Regestrieren
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="flex-center h100">
+    <ion-card>
+      <ion-card-header>
+        <img style="margin: 10px" src="../../assets/logo_rmbg.png" width="50px" alt="">
+        <ion-card-title>Regestrieren</ion-card-title>
+        <ion-card-subtitle>Wilkommen bei WealthWizrad. Bevor wir mit den Lernen beginnen können, brauchen wir ein paar Informationen von dir.</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form (ngSubmit)="register()" #registerForm="ngForm">
+          <ion-item>
+            <ion-input label="Benutzername" type="text" labelPlacement="floating"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Email" type="email" labelPlacement="floating" placeholder="max.muser@mail.com"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Passwort" type="password" labelPlacement="floating" ></ion-input>
+          </ion-item>
+          <ion-button color="primary" size="full" type="submit" [disabled]="!registerForm.valid">Regestrieren</ion-button>
+        </form>
+        <ion-button class="custom-button"(click)="navigateToLogin()" color="dark" size="full" fill="clear">Anmelden</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+

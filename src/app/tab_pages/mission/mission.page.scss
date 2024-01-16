@@ -1,0 +1,31 @@
+.list{
+    margin-left: 20px;
+    --ion-item-border:10px;
+    --ion-item-border-color: #5a3179;
+    --ion-item-background: #e0dcdc;
+    --ion-item-border-bottom-lenght: 100px;
+    border-radius: 20px;
+    border-bottom: 50px;
+    border: solid #5a3179 ;
+}
+
+.button{
+    --background: #b884cc;
+    position: absolute;
+    right: 20px;
+    width: 190px;
+    height: 80px;
+    border-radius: 50px;
+    border:solid #5a3179 ;
+}
+
+.h3{
+    color: #5a3179; 
+    margin-left: 20px;
+}
+
+.p{
+    margin-left: 20px;  
+    margin-left: 20px; 
+    margin-bottom: 30px;
+}
