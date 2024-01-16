@@ -18,13 +18,16 @@
       <ion-card-content>
         <form (ngSubmit)="register()" #registerForm="ngForm">
           <ion-item>
-            <ion-input label="Benutzername" type="text" labelPlacement="floating"></ion-input>
+            <ion-label position="floating">Benutzername</ion-label>
+            <ion-input [(ngModel)]="username" name="username" type="text" required></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input label="Email" type="email" labelPlacement="floating" placeholder="max.muser@mail.com"></ion-input>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input [(ngModel)]="email" name="email" type="email" required></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input label="Passwort" type="password" labelPlacement="floating" ></ion-input>
+            <ion-label position="floating">Passwort</ion-label>
+            <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
           </ion-item>
           <ion-button color="primary" size="full" type="submit" [disabled]="!registerForm.valid">Regestrieren</ion-button>
         </form>

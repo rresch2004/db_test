@@ -1,6 +1,6 @@
 import {v4} from "uuid";
 
-export class Book {
+export class Wealthwizard {
 
   /**
    * Id of the book

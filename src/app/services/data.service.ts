@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Book} from "../../models/Book";
+import {Wealthwizard} from "../../models/Book";
 const PouchDB = require('pouchdb').default;
 
 
@@ -9,78 +9,60 @@ const PouchDB = require('pouchdb').default;
 export class DataService {
 
   private db;
+
   constructor() {
     console.log('Service created');
-
-    this.db = PouchDB('books');
-
+    this.db = new PouchDB('wealthwizard');
   }
 
+  createUserDatabase(username: string) {
+    return new PouchDB(`userdb-${username}`);
+  }
 
-
-  async updateBook(book: Book): Promise<Book | null> {
+  async updateWealthwizard(wealthwizard: Wealthwizard): Promise<Wealthwizard | null> {
     try {
-
-      // save book to db
-      var response = await this.db.put(book);
+      // Wealthwizard in die Datenbank speichern
+      const response = await this.db.put(wealthwizard);
 
       if (response.ok) {
-        book.Rev = response.rev;
-
-        return book;
-      }
-      else {
+        wealthwizard.Rev = response.rev;
+        return wealthwizard;
+      } else {
         return null;
       }
-
-    }
-    catch (err) {
+    } catch (err) {
       return null;
     }
   }
 
-  async saveBook(book: Book): Promise<boolean> {
+  async saveWealthwizard(wealthwizard: Wealthwizard): Promise<boolean> {
     try {
-      console.log(book);
-
-      var response = await this.db.put(book);
-
+      console.log(wealthwizard);
+      const response = await this.db.put(wealthwizard);
       console.log(response);
-
       return true;
-    }
-    catch (err) {
+    } catch (err) {
       console.log(err);
       return false;
     }
   }
 
-  async fetchBooks(): Promise<Book[]> {
+  async fetchWealthwizards(): Promise<Wealthwizard[]> {
     try {
-
       const data = await this.db.allDocs({
         include_docs: true
       });
 
-      console.log(data);
-
-
-      const books = data.rows.map((row: any) => {
-        console.log(row.doc);
-        const b = new Book(row.doc.isbn, row.doc.name, row.doc._id);
-        b.Rev = row.doc._rev;
-
-        return b;
+      const wealthwizards = data.rows.map((row: any) => {
+        const w = new Wealthwizard(row.doc.isbn, row.doc.name, row.doc._id);
+        w.Rev = row.doc._rev;
+        return w;
       });
 
-      return books;
+      return wealthwizards;
 
-    }
-    catch (err) {
+    } catch (err) {
       return [];
     }
   }
-
-
-
 }
